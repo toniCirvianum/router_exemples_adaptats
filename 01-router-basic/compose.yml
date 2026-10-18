@@ -1,0 +1,12 @@
+services:
+  php:
+    build: .
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8085:80
+    command: >
+      bash -lc "a2enmod rewrite &&
+               apache2-foreground"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

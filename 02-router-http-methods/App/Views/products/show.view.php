@@ -1,0 +1,4 @@
+<h3><?= htmlspecialchars($product["name"], ENT_QUOTES, "UTF-8") ?></h3>
+<p>ID: <?= htmlspecialchars($product["id"]) ?></p>
+<p>Preu: <?= number_format($product["price"], 2, ",", ".") ?> €</p>
+<a href="/products">Tornar</a>
